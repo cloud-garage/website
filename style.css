@@ -72,7 +72,21 @@ figure {
   margin: 25px auto 25px;
   width: 90%;
   -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transition: ease 0.1s;
+  -o-transition: ease 0.1s;
+  transition: ease 0.1s; }
+  figure:hover {
+    -webkit-transform: scale(1.025);
+    -ms-transform: scale(1.025);
+    transform: scale(1.025); }
+  figure:active {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95); }
   figure:first-of-type {
     margin: 75px auto 25px; }
   figure:last-of-type {
