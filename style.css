@@ -1,10 +1,12 @@
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: white; }
 
 html {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: #1a1a1a; }
 
 h1, h2, p {
   color: #1a1a1a; }
@@ -71,8 +73,8 @@ figure {
   display: block;
   margin: 25px auto 25px;
   width: 90%;
-  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   -webkit-transform-origin: center center;
   -ms-transform-origin: center center;
   transform-origin: center center;
@@ -93,6 +95,8 @@ figure {
     margin: 25px auto 75px; }
   figure img {
     display: block;
+    width: 100%; }
+  figure .text {
     width: 100%; }
   figure h2 {
     display: block;

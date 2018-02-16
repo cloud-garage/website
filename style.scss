@@ -3,11 +3,13 @@ $bg: rgb(26, 26, 26);
 body {
     margin: 0;
     padding: 0;
+    background-color: white;
 }
 
 html {
     margin: 0;
     padding: 0;
+    background-color: $bg;
 }
 
 h1, h2, p {
@@ -85,7 +87,7 @@ figure {
     display: block;
     margin: 25px auto 25px;
     width: 90%;
-    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     transform-origin: center center;
     transition: ease 0.1s;
 
@@ -107,6 +109,10 @@ figure {
 
     img {
         display: block;
+        width: 100%;
+    }
+
+    .text {
         width: 100%;
     }
 
