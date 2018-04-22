@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        
+        meta(name="theme-color", content="rgba(0,167,255,1)")
+        meta(name="og:site_name", content="Cloud Garage")
+        meta(name="og:title", content="DIY-DRONE")
+        meta(name="og:image", content="http:/cloud-garage.ga/projects/diy-drone/thumbnail.jpg")
+        meta(name="og:description", content="Ever wanted to build a drone by yourself? We will make that dream come true!")
+        link(rel="shortcut icon", href="/assets/favicon.ico", type="image/x-icon")
+        
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Quicksand:400|Roboto:300")
+        link(rel="stylesheet", href="/style.css")
+        title DIY-DRONE - Cloud Garage
+    body
+        nav#nav_bar
+            img.logo(src="/assets/logo_text_only.png", alt="Cloud Garage")
+            a.expand(onclick="expand_nav();")
+                img.expand(src="/assets/expand.png", alt="Menu")
+        nav#nav_menu
+            ul.links
+                li
+                    a(href="/") Home
+                li
+                    a(href="/projects") Projects
+                li
+                    a(href="/shop") Shop
+                li
+                    a(href="/contact") Contact
+        article
+            content
+                h1 DIY-DRONE
+                span.subtle April 2018
+                section.slider
+                    img(src="thumbnail.jpg", alt="Thumbnail")
+                    video(controls)
+                        source(src="intro.mp4", type="video/mp4")
+                        source(src="intro.ogg", type="video/ogg")
+                        | Your browser does not support the video tag.
+                    img(src="pcb_soldering_01.jpg", alt="Soldering parts on a PCB")
+                    img(src="pcb_soldering_02.jpg", alt="Soldering parts on a PCB")
+                p.emphasize Ever wanted to build a drone by yourself?
+                p.center We will make that dream come true!
+                h2 1. Getting Started
+                h3 1.1 Hardware
+                p
+                    | First, you'll need all the parts in order to assemble a drone yourself. You can purchase a kit from our 
+                    a(href="/shop") shop
+                    | , which includes everything you need (and helps us develop new projects). If you want a bigger challenge, you can also find all the parts online, but you'll need to build the PCB and enclosure yourself.
+                p
+                    | While you're eagerly waiting for you package to arrive, you should read through this article, so you'll already know what's coming next.
+                h3 1.2 GitHub
+                p
+                    | All files for this project can be found on GitHub (
+                    a(href="https://github.com/cloud-garage/diy-drone", target="_blank") github.com/cloud-garage/diy-drone
+                    | ). You will have to download or clone the repository to your PC to get started.
+                p
+                    | The folder structure is pretty self-explenatory, but you can still read about it in the <i>README.md</i>. Each directory also has its own readme file with all necessery explanations. You can play around with the project to become familiar with it.
+                h3 1.3 Questions &amp; Help
+                p
+                    | If you have any questions or problems, feel free to comment on the bottom of this page and we'll look into your problem.
+                h2 2. Hardware
+                p
+                    | This part of the tutorial covers the dirty part of building a drone 😏
+                h3 2.1 Soldering
+                p
+                    | Using the plans from the GitHub repository you need to need to solder each part into place like this: 
+                section.slider
+                    img(src="pcb_soldering_01.jpg", alt="Soldering parts on a PCB")
+                    img(src="pcb_soldering_02.jpg", alt="Soldering parts on a PCB")
+                p
+                    | Look up a tutorial online if you're having problems and don't worry if you mess it up the first time, we've included a second PCB in the kit, just in case 😇
+                p.emphasize
+                    | Note: Wait with plugging the Arduino into the headers, until you're finished soldering.
+                h3 2.2 Attaching components
+                p
+                    | Next you'll have to place the motors and the PCB inside the enclosure of the drone like this:
+                section.slider
+                    img(src="case_01.jpg", alt="Mounting the PCB in the enclosure")
+                    img(src="case_02.jpg", alt="Mounting the motors in the enclosure")
+                p
+                    | Now you'll only have to connect the wires:
+                section.slider
+                    img(src="wires.jpg", alt="Connecting wires")
+                h2 3 Software
+                p
+                    | Now we get to the programming part
+                h3 3.1 Setting up Arduino IDE
+                p
+                    | To get started you'll need to download the Arduino IDE from 
+                    a(href="https://www.arduino.cc/en/Main/Software", target="_blank") Arduino.cc
+                    | .
+                p
+                    | Also, you'll have to install 
+                h3 3.2 Programming the Arduino
+                p
+                    | Connect your Arduino to your PC. and open <i>DIY_DRONE.ino</i>. Maybe you'll have to choose your board under <i>Tools &gt; Board &gt; Arduino Nano w/ ATmega328</i>
+                p
+                    | Now you'll only have to press the upload button and the program will be uploaded within a few seconds.
+                #disqus_thread
+                script.
+                    var disqus_config = function () {
+                        this.page.url = PAGE_URL;
+                        this.page.identifier = PAGE_IDENTIFIER;
+                    };
+                    (function () {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://cloudgarage.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                noscript
+                    | Please enable JavaScript to view the
+                    a(href='https://disqus.com/?ref_noscript') comments powered by Disqus.
+        footer#footer
+            p &copy;Copyright 2018 by Cloud Garage
+            p
+                a(href="/imprint.html") Imprint
+                |  | 
+                a(href="/contact") Contact
+        script(src="/main.js")
+        script(id="dsq-count-scr", src="//cloudgarage.disqus.com/count.js", async)
